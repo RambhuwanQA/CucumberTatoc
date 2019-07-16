@@ -11,16 +11,16 @@ import org.openqa.selenium.WebElement;
 import util.ReadFilee;
 
 public class PopupActions {
-	static WebDriver driver;
+    WebDriver driver;
 	public PopupActions(WebDriver driver) {
 		this.driver=driver;
 	}
-	public static void popUp() {
+	public void popUp() {
     WebElement popPup = ReadFilee.getElement(driver, "poPup", "locator.txt");
 		
-		popPup.click();
-		 String parent=driver.getWindowHandle();
-			Set<String> parentWindow=driver.getWindowHandles();
+		   popPup.click();
+		   String parent=driver.getWindowHandle();
+		   Set<String> parentWindow=driver.getWindowHandles();
 	        
 	        Iterator<String>itr=parentWindow.iterator();
 	        while(itr.hasNext()) {

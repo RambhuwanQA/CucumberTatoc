@@ -9,13 +9,13 @@ import org.openqa.selenium.interactions.Actions;
 import util.ReadFilee;
 
 public class DragMeActions {
-	static WebDriver driver;
+    WebDriver driver;
 	
 	public DragMeActions(WebDriver driver) {
 		this.driver=driver;
 	}
-	public static void dragMe() {
-		 WebElement dragMe =ReadFilee.getElement(driver, "dragMe", "locator.txt");
+	public  void dragMe() {
+		    WebElement dragMe =ReadFilee.getElement(driver, "dragMe", "locator.txt");
 			
 			WebElement dropBox = ReadFilee.getElement(driver, "dropBox", "locator.txt");
 			Actions action = new Actions(driver);

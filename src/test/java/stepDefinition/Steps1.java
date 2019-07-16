@@ -23,15 +23,16 @@ public class Steps1 {
 	DragMeActions dragMe;
 	PopupActions popup;
 	@Given("^user is on home page$")
-	public void user_is_on_home_page() throws Throwable {
+	public void user_is_on_home_page() throws Throwable 
+	{
 	    
-	     String url="http://10.0.1.86/tatoc";
-	     System.setProperty("webdriver.chrome.driver", "C:\\Users\\rambhuwanrajpoot\\Downloads\\chromedriver.exe");
+	      String url="http://10.0.1.86/tatoc";
+	      System.setProperty("webdriver.chrome.driver", "C:\\Users\\rambhuwanrajpoot\\Downloads\\chromedriver.exe");
 	     
-	     driver=new ChromeDriver();
-	     System.out.println("initialized driver ");
-	     driver.get(url);
-	     driver.manage().window().maximize();
+	      driver=new ChromeDriver();
+	      System.out.println("initialized driver ");
+	      driver.get(url);
+	      driver.manage().window().maximize();
 	     
 	      basiactions = new ClickOnBasicActions(driver) ;
 	      green=new ClickOnGreenActions(driver);
@@ -43,7 +44,6 @@ public class Steps1 {
 	@When("^user click on basic course$")
 	public void user_click_on_basic_course() throws Throwable {
 		basiactions.clickOnBasic();
-		System.out.println("click on basic");
 }
 	@When("^click on green$")
 	public void click_on_green() throws Throwable {
@@ -66,6 +66,5 @@ public class Steps1 {
 	    WebElement finish=driver.findElement(By.xpath("//h1[@class=\"finish\"]"));
 	    String finishText=finish.getText();
 	    assertEquals(finishText, "End");
-	    System.out.println("finished");
 	}
 }

@@ -62,5 +62,5 @@ public class ReadFilee {
 		    return driver.findElement(By.className(locatorValue));
 	    }
 	}
-	
+
 }

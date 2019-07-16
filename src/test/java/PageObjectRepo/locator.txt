@@ -1,10 +1,10 @@
-clickOnBasic:xpath://a [text()="Basic Course"]
-clickOnGreen:xpath://div[@class="greenbox"]
-color1:xpath://div[text()="Box 1"]
-color2:xpath://div[text()="Box 2"]
+Basic:xpath://a [text()="Basic Course"]
+GreenBox:xpath://div[@class="greenbox"]
+Box1:xpath://div[text()="Box 1"]
+Box2:xpath://div[text()="Box 2"]
 rePaint:xpath://a[text()="Repaint Box 2"]
 proceed1:xpath://a[text()="Proceed"]
-dragMe:css:.ui-draggable
+dragBox:css:.ui-draggable
 dropBox:xpath://div[text()="DROPBOX"]
 proCeed2:xpath://a[text()="Proceed"]
 poPup:xpath://a[text()="Launch Popup Window"]

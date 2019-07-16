@@ -7,22 +7,22 @@ import util.ReadFilee;
 
 public class RepaintActions {
 	
-	static WebDriver driver;
+	WebDriver driver;
 	public RepaintActions(WebDriver driver) {
 		this.driver=driver;
 	}
 	
-	public static void Repaint() {
+	public void Repaint() {
 	driver .switchTo().defaultContent();
 	driver .switchTo().frame("main");
 	
 	
-	String color1 = ReadFilee.getElement(driver, "color1", "locator.txt").getCssValue("background-color");
+	String color1 = ReadFilee.getElement(driver, "Box1", "locator.txt").getCssValue("background-color");
 	System.out.println("color1: " + color1);
 	driver.switchTo().frame("child");
 	
     
-	String color2 = ReadFilee.getElement(driver, "color2", "locator.txt").getCssValue("background-color");
+	String color2 = ReadFilee.getElement(driver, "Box2", "locator.txt").getCssValue("background-color");
 	System.out.println("color2 :" + color2);
 	
 	driver.switchTo().defaultContent();
@@ -42,7 +42,7 @@ public class RepaintActions {
 			driver.switchTo().defaultContent();
 			driver.switchTo().frame("main");
 			driver.switchTo().frame("child");
-			color2 = ReadFilee.getElement(driver, "color2", "locator.txt") .getCssValue("background-color");
+			color2 = ReadFilee.getElement(driver, "Box2", "locator.txt") .getCssValue("background-color");
 		}
 	}
 
